@@ -94,7 +94,7 @@ Administración del sitio → Plugins → Plugins locales → GeniAI (EduLabs)
 
 Configurar la clave API de OpenAI.
 
-Uso del Chatbot
+## Uso del Chatbot
 
 Entrar a cualquier curso.
 
