@@ -108,4 +108,6 @@ Además, si eres profesor o administrador, puedes ejecutar:
 
 Ejemplos:
 
-Crea un curso sobre Introducción a la IA, con duración de 5 semanas y una breve descripción.
+Crear curso de Programación Web con 5 semanas. Descripción: Desarrollo de sitios web con HTML, CSS y JavaScript
+<img width="431" height="769" alt="image" src="https://github.com/user-attachments/assets/580984c4-7de3-4e9c-9cfe-eeae624cd6e4" />
+
