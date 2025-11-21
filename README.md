@@ -1,23 +1,111 @@
-## ChatGPT Assistant
+🚀 Descripción del proyecto
 
-O plugin "ChatGPT Assistant" foi desenvolvido como uma extensão destinada a aprimorar a experiência educacional no ambiente online do Moodle. Este assistente interativo tem como propósito oferecer suporte aos alunos, esclarecendo dúvidas tanto relacionadas ao funcionamento do Moodle quanto ao conteúdo do curso, promovendo, assim, uma comunicação eficaz e facilitando a aprendizagem autônoma.
+Este proyecto consiste en la personalización y ampliación del plugin Open Source GeniAI para Moodle, disponible originalmente en:
+https://moodle.org/plugins/local_geniai
 
-Ao facilitar a interação entre alunos e a plataforma, o plugin promove uma comunicação eficaz, tornando mais acessível o esclarecimento de dúvidas. Além disso, estimula a aprendizagem autônoma, capacitando os alunos a buscar respostas de maneira independente.
+El plugin fue modificado para la empresa EduLabs, incluyendo:
 
-Para otimizar a utilização do "ChatGPT Assistant," é necessário possuir a Chave da API da OpenAI. Vale ressaltar que, para usufruir da versão GPT-4, é requerido um pagamento inicial no valor de $1.
+✔ Cambios visuales
 
-### Como obter a API de acesso
+Nuevo nombre del plugin.
 
-Para criar uma API, acesse [API keys](https://platform.openai.com/api-keys).
+Nuevo ícono con el logo de EduLabs.
 
-### Como posso acessar o GPT-4?
+Cambio completo de colores (look & feel) para ajustarse a la identidad visual de EduLabs.
 
-Depois de efetuar um pagamento bem-sucedido de US$ 5 ou mais (nível de uso 1), você poderá acessar o [GPT-4 e o GPT-4 Turbo](https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo) por meio da API OpenAI. [Saiba mais sobre como adicionar crédito à sua conta OpenAI](https://help.openai.com/en/articles/8264644-what-is-prepaid-billing).
+Implementación del idioma español para toda la interfaz del plugin.
 
-### Prints
+✔ Funcionalidades ampliadas — Función principal del proyecto
 
-![captura-01](https://github.com/user-attachments/assets/2937d9dd-aec3-45c9-83c5-19693260a964)
+Se agregó una nueva funcionalidad avanzada que permite:
 
-![captura-02](https://github.com/user-attachments/assets/518e49b4-4f15-4e2b-823d-006c8f139bf3)
+🧠 Creación automática de cursos usando OpenAI
 
-![captura-03](https://github.com/user-attachments/assets/b831a716-ee8c-464f-a6c7-4d7304fc5c03)
+Administradores y profesores pueden solicitarle al chatbot que genere un curso completo.
+Los estudiantes NO pueden ejecutar esta función.
+
+El usuario escribe en el chat algo como:
+
+"Crea un curso sobre Ciberseguridad, duración 4 semanas, con una descripción corta."
+
+El plugin usa la API de OpenAI para generar:
+
+📌 Nombre del curso
+
+📄 Descripción del curso en HTML
+
+🖼 Imagen descriptiva del curso
+
+🗂 Secciones semanales del curso, incluyendo:
+
+nombre de cada semana
+
+imagen ilustrativa por semana
+
+semana 1 → Introducción
+
+última semana → Cierre
+
+Una vez retornada la información, el plugin:
+
+✔ Crea automáticamente el curso en Moodle 4.5
+
+Asigna formato semanal
+
+Crea las secciones
+
+Aplica descripciones
+
+Inserta imágenes
+
+Devuelve un enlace directo al curso recién creado
+
+🧩 Requisitos
+
+Moodle 4.5.x (probado en Moodle 4.5.7)
+
+PHP 8.1 o superior
+
+Servidor con cURL habilitado
+
+Clave de API de OpenAI
+
+
+
+## Instalación
+
+Copiar la carpeta geniai dentro de:
+
+/moodle/local/
+
+
+Debe quedar así:
+
+/moodle/local/geniai/
+
+
+Ingresar a Moodle como administrador.
+
+Moodle detectará el plugin → clic en Actualizar base de datos.
+
+Ir a:
+
+Administración del sitio → Plugins → Plugins locales → GeniAI (EduLabs)
+
+Configurar la clave API de OpenAI.
+
+Uso del Chatbot
+
+Entrar a cualquier curso.
+
+En el menú lateral → aparece el Chat GeniAI personalizado.
+
+Escribir dudas o pedir explicaciones del curso.
+
+Además, si eres profesor o administrador, puedes ejecutar:
+
+🧠 Crear un curso mediante IA
+
+Ejemplos:
+
+Crea un curso sobre Introducción a la IA, con duración de 5 semanas y una breve descripción.
